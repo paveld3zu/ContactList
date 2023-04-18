@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zv0-qN-MtT">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts-->
+        <!--Persons List-->
         <scene sceneID="FNE-3c-3JS">
             <objects>
                 <tableViewController id="VFo-Jr-iMt" customClass="ContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hv5-gh-EAt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" textLabel="nOo-c7-cLG" style="IBUITableViewCellStyleDefault" id="Hv5-gh-EAt">
                                 <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hv5-gh-EAt" id="jdT-ln-6ED">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nOo-c7-cLG">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9rL-Ui-Hyc" kind="show" id="Rp9-cH-MvD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,11 +44,53 @@
                             <outlet property="delegate" destination="VFo-Jr-iMt" id="W9R-lm-nWe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="mhr-3l-wBn"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="mhr-3l-wBn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9R8-7q-usD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="2"/>
+            <point key="canvasLocation" x="161" y="0.0"/>
+        </scene>
+        <!--Contact Info View Controller-->
+        <scene sceneID="Yla-Hm-hJn">
+            <objects>
+                <viewController id="9rL-Ui-Hyc" customClass="ContactInfoViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIY-pi-ezj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFo-Wr-FkL">
+                                <rect key="frame" x="16" y="130" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvN-3p-XPV">
+                                <rect key="frame" x="16" y="192" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lzx-fy-AaG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lzx-fy-AaG" firstAttribute="trailing" secondItem="vvN-3p-XPV" secondAttribute="trailing" constant="16" id="3wj-eo-J6Z"/>
+                            <constraint firstItem="CFo-Wr-FkL" firstAttribute="leading" secondItem="lzx-fy-AaG" secondAttribute="leading" constant="16" id="47q-yE-IzQ"/>
+                            <constraint firstItem="vvN-3p-XPV" firstAttribute="top" secondItem="CFo-Wr-FkL" secondAttribute="bottom" constant="41.5" id="ZdK-bL-KJs"/>
+                            <constraint firstItem="lzx-fy-AaG" firstAttribute="trailing" secondItem="CFo-Wr-FkL" secondAttribute="trailing" constant="16" id="bZd-Ve-gW8"/>
+                            <constraint firstItem="CFo-Wr-FkL" firstAttribute="top" secondItem="kIY-pi-ezj" secondAttribute="top" constant="130" id="edL-sg-9LK"/>
+                            <constraint firstItem="vvN-3p-XPV" firstAttribute="leading" secondItem="lzx-fy-AaG" secondAttribute="leading" constant="16" id="iAB-L0-pMz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lfM-dD-41z"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="vvN-3p-XPV" id="xGs-Lq-GXl"/>
+                        <outlet property="phoneLabel" destination="CFo-Wr-FkL" id="yjf-hf-i3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQK-8T-fAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.5" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q2p-p6-Qtc">
@@ -51,7 +106,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi7-BF-VMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="2"/>
+            <point key="canvasLocation" x="-557" y="1"/>
         </scene>
     </scenes>
     <resources>

@@ -15,6 +15,7 @@
 		687B7F4829EE75AA008348D6 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4729EE75AA008348D6 /* ContactListViewController.swift */; };
 		687B7F4A29EE763F008348D6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4929EE763F008348D6 /* DataStore.swift */; };
 		687B7F4D29EE7C47008348D6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4C29EE7C47008348D6 /* Person.swift */; };
+		687B7F5029EE87E4008348D6 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4F29EE87E4008348D6 /* ContactInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		687B7F4729EE75AA008348D6 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		687B7F4929EE763F008348D6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		687B7F4C29EE7C47008348D6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		687B7F4F29EE87E4008348D6 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		687B7F4629EE7288008348D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				687B7F4F29EE87E4008348D6 /* ContactInfoViewController.swift */,
 				687B7F4729EE75AA008348D6 /* ContactListViewController.swift */,
 			);
 			path = ViewControllers;
@@ -189,6 +192,7 @@
 				687B7F4A29EE763F008348D6 /* DataStore.swift in Sources */,
 				687B7F3329EE7183008348D6 /* SceneDelegate.swift in Sources */,
 				687B7F4829EE75AA008348D6 /* ContactListViewController.swift in Sources */,
+				687B7F5029EE87E4008348D6 /* ContactInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
