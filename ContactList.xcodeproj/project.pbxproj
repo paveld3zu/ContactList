@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		687B7F3129EE7183008348D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F3029EE7183008348D6 /* AppDelegate.swift */; };
 		687B7F3329EE7183008348D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F3229EE7183008348D6 /* SceneDelegate.swift */; };
-		687B7F3529EE7183008348D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F3429EE7183008348D6 /* ViewController.swift */; };
 		687B7F3829EE7183008348D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687B7F3629EE7183008348D6 /* Main.storyboard */; };
 		687B7F3A29EE7184008348D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687B7F3929EE7184008348D6 /* Assets.xcassets */; };
 		687B7F3D29EE7184008348D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687B7F3B29EE7184008348D6 /* LaunchScreen.storyboard */; };
+		687B7F4829EE75AA008348D6 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4729EE75AA008348D6 /* ContactListViewController.swift */; };
+		687B7F4A29EE763F008348D6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F4929EE763F008348D6 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		687B7F2D29EE7183008348D6 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687B7F3029EE7183008348D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		687B7F3229EE7183008348D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		687B7F3429EE7183008348D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		687B7F3729EE7183008348D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		687B7F3929EE7184008348D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687B7F3C29EE7184008348D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		687B7F3E29EE7184008348D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		687B7F4729EE75AA008348D6 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		687B7F4929EE763F008348D6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		687B7F2F29EE7183008348D6 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				687B7F4B29EE764F008348D6 /* Services */,
 				687B7F4529EE727C008348D6 /* App */,
 				687B7F4629EE7288008348D6 /* ViewControllers */,
 				687B7F4429EE7264008348D6 /* Storyboards */,
@@ -86,9 +89,17 @@
 		687B7F4629EE7288008348D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				687B7F3429EE7183008348D6 /* ViewController.swift */,
+				687B7F4729EE75AA008348D6 /* ContactListViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		687B7F4B29EE764F008348D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				687B7F4929EE763F008348D6 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				687B7F3529EE7183008348D6 /* ViewController.swift in Sources */,
 				687B7F3129EE7183008348D6 /* AppDelegate.swift in Sources */,
+				687B7F4A29EE763F008348D6 /* DataStore.swift in Sources */,
 				687B7F3329EE7183008348D6 /* SceneDelegate.swift in Sources */,
+				687B7F4829EE75AA008348D6 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +325,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZWP724RH62;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,12 +357,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZWP724RH62;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
