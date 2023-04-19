@@ -16,7 +16,8 @@ final class DataStore {
         "Maxim",
         "Gleb",
         "Mihail",
-        "Natasha"
+        "Natasha",
+        "Kirill"
     ]
     
     let surnames = [
