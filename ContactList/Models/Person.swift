@@ -11,6 +11,10 @@ struct Person {
     let email: String
     let phoneNumber: String
     
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
     static func getPerson() -> [Person] {
         
         var persons: [Person] = []
